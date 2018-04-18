@@ -1,0 +1,17 @@
+<?php
+include("connect.php");
+
+$name =$_GET['sel_candidate'];
+echo $name."<br/>";
+
+$query = "update cr set votes=votes+1 where name=\"$name\"";
+
+mysqli_query($dbh,$query) or die("error updating the vote");
+
+echo "your vote is successful"."<br/>";
+
+
+
+
+
+?>
